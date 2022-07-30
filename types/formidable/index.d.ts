@@ -173,7 +173,7 @@ declare namespace formidable {
          *
          * @default null
          */
-        fileWriteStreamHandler?: (() => Writable) | undefined;
+        fileWriteStreamHandler?: ((file: VolatileFile | PersistentFile) => Writable) | undefined;
 
         /**
          * when you call the .parse method, the files argument (of the callback) will contain arrays of
